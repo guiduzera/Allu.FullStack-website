@@ -82,3 +82,36 @@ Dar exemplos
 
 ---
 ⌨️ com ❤️ por [Guilherme Carvalho](https://github.com/guiduzera) 😊
+
+# colocar depois no backend
+
+```mermaid
+classDiagram
+  class Produto {
+    - produto_id : int
+    - nome : string
+    - descricao : string
+    - foto : string
+    - preco : decimal
+  }
+
+  class Usuario {
+    - usuario_id : int
+    - nome : string
+    - email : string
+    - senha : string
+  }
+
+  class PedidoDeAssinatura {
+    - pedido_id : int
+    - usuario_id : int
+    - data_pedido : date
+    - status : string
+    - documento_identificacao : string
+    - produto_id : int
+    - quantidade : int
+  }
+
+  Produto "1" -- "many" PedidoDeAssinatura : Contém
+  Usuario "1" -- "many" PedidoDeAssinatura : Realiza
+```
