@@ -1,0 +1,21 @@
+{
+    "name": "database",
+    "version": "1.0.0",
+    "description": "",
+    "main": "init.js",
+    "scripts": {
+      "start": "node init.js",
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "compose:up": "docker-compose -f docker-compose.dev.yml up -d --build",
+      "compose:down": "docker-compose -f docker-compose.dev.yml down --rmi local -v --remove-orphans",
+      "compose:restart": "docker-compose -f docker-compose.dev.yml restart",
+      "compose:restart:env": "docker-compose -f docker-compose.dev.yml up -d"
+    },
+    "keywords": [],
+    "author": "Guilherme Carvalho",
+    "license": "ISC",
+    "dependencies": {
+      "dotenv": "^16.0.1",
+      "nodegit": "^0.28.0-alpha.18"
+    }
+}
