@@ -68,6 +68,7 @@ export const CardContainer = styled.div<{ $status: string }>`
             width: 100%;
             max-width: 100%;
             height: 100%;
+            max-height: 100%;
             object-fit: cover;
             border-radius: 0.5rem;
         }
@@ -75,14 +76,15 @@ export const CardContainer = styled.div<{ $status: string }>`
 
     > .productInfosContainer {
         display: flex;
+        width: 50%;
+        height: 100%;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 1rem;
         padding: 1rem;
         gap: 0.5rem;
 
         > h1 {
-            font-size: 1.5rem;
+            font-size: calc(1rem + 0.5vw);
             white-space: nowrap;
             font-weight: 600;
             font-family: Segoe UI;
