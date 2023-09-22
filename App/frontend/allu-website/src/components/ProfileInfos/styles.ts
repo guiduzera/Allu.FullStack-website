@@ -45,7 +45,7 @@ export const Container = styled.div`
     }
 `;
 
-export const CardContainer = styled.div<{ status: string }>` 
+export const CardContainer = styled.div<{ $status: string }>` 
     width: 100%;
     height: 100%;
     display: flex;
@@ -96,7 +96,7 @@ export const CardContainer = styled.div<{ status: string }>`
             display: flex;
             justify-content: center;
             color: ${({ theme }) => theme.background};
-            background: ${({ theme, status }) => status === 'active' ? theme.primary : theme.error};
+            background: ${({ theme, $status }) => $status === 'active' ? theme.primary : theme.error};
             font-size: 1rem;
             font-weight: 400;
             padding: 0.3rem;

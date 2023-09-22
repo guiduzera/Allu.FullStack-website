@@ -2,10 +2,6 @@
 import { lighten } from 'polished';
 import styled from 'styled-components';
 
-interface IsActive {
-  isActive: boolean;
-}
-
 export const Container = styled.header`
   background: ${({ theme }) => theme.componentsBackground};
   width: 100%;
@@ -23,16 +19,15 @@ export const Container = styled.header`
   }
 `;
 
-export const LinkContainer = styled.li<IsActive>`
+export const LinkContainer = styled.li<{ $isActive: boolean }>`
   a {
     text-transform: uppercase;
-    color: ${props =>
-      props.isActive ? props.theme.primary : props.theme.background};
+    color: ${props => (props.$isActive ? props.theme.primary : props.theme.background)};
     transition: 0.5s;
 
     &:hover {
       color: ${props =>
-        props.isActive
+        props.$isActive
           ? props.theme.primary
           : lighten(0.2, props.theme.primary)};
     }

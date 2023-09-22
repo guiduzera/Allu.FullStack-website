@@ -4,7 +4,7 @@ import { CardContainer } from "./styles";
 const ProductCard = () => {
   const active = 'active';
   return (
-    <CardContainer status="active">
+    <CardContainer $status="active">
       <div className="productInfosContainer">
         <h1>Iphone 15 pro max</h1>
         <span>{active}</span>
