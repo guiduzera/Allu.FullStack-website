@@ -6,7 +6,13 @@ const SearchBar = () => {
     <SearchBarContainer>
       <input type="text" placeholder="Pequise um produto" />
       <button type="submit">
-        <TbShoppingBagSearch size={20} />
+        <TbShoppingBagSearch style={{  
+          fontSize: "2rem",
+          cursor: "pointer",
+          '@media (mix-width: 768px)': {
+            fontSize: "5rem",
+          },
+        }} />
       </button>
     </SearchBarContainer>
   );

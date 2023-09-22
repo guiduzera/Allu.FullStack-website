@@ -14,6 +14,12 @@ export const CatalogContainer = styled.div`
     width: 100%;
     height: 8rem;
   }
+
+  @media (min-width: 768px) {
+    > .catalogLimit {
+      height: 16rem;
+    }
+  }
 `;
 
 export const FilterContainer = styled.div`
@@ -78,5 +84,9 @@ export const FilterContainer = styled.div`
       width: 1rem;
       height: 1rem;
     }
+  }
+
+  @media (min-width: 768px) {
+    justify-content: center;
   }
 `;

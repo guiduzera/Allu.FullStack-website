@@ -17,7 +17,7 @@ const ProductCard = ({ showSpan, spanPhrase }: ProductCardProps) => {
           position: "absolute",
           bottom: "10px",
           left: "80px",
-        }} />
+        }} className="cartLogo" />
         <p>R$ 15 000</p>
       </div>
       <div className="imageContainer">

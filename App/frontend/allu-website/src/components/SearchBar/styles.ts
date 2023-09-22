@@ -22,5 +22,9 @@ export const SearchBarContainer = styled.div`
         background-color: ${({ theme }) => theme.background};
     }
 
-    > button > img {
+    @media (min-width: 768px) {
+        > input {
+            width: 60%;
+        }
+    }
 `;

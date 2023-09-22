@@ -59,7 +59,7 @@ export const Container = styled.div`
       }
 
       > .productLimit {
-        width: 80%;
+        width: 100%;
       }
     }
   }
@@ -187,7 +187,15 @@ export const CardContainer = styled.div<{ $status: string, $show: string }>`
 
       > span {
         font-size: 1.5rem;
-        width: 5rem;
+        width: 5.5rem;
+      }
+
+      > .cartLogo {
+        position: absolute;
+        bottom: 12px !important;
+        left: 110px !important;
+        width: 2rem;
+        height: 2rem;
       }
     }
   }
