@@ -20,6 +20,11 @@ export const Container = styled.div`
             font-weight: 600;
             color: ${({ theme }) => theme.primary};
         }
+
+        > img {
+            width: 50%;
+            max-width: 50%;
+        }
     }
 
     > .productContainer {
@@ -49,6 +54,7 @@ export const CardContainer = styled.div<{ status: string }>`
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
     border-radius: 0.5rem;
     position: relative;
+    margin-bottom: 1rem;
 
 
     > .imageContainer {

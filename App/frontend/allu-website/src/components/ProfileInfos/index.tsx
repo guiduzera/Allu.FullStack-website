@@ -7,7 +7,7 @@ const ProfileInfos = () => {
   return (
     <Container>
 			<div className="titleContainer">
-				<img src="https://images.macrumors.com/t/n4CqVR2eujJL-GkUPhv1oao_PmI=/1600x/article-new/2019/04/guest-user-250x250.jpg" alt="user image" width={200} />
+				<img src="https://images.macrumors.com/t/n4CqVR2eujJL-GkUPhv1oao_PmI=/1600x/article-new/2019/04/guest-user-250x250.jpg" alt="user image" />
 				<h1>Olá, { user }!</h1>
 			</div>
 			<div className="productContainer">
