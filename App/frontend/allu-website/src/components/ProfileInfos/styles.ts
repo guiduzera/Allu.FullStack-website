@@ -108,7 +108,7 @@ export const Container = styled.div`
   }
 `;
 
-export const CardContainer = styled.div<{ $status: string }>`
+export const CardContainer = styled.div<{ $status: string, $show: string }>`
   width: 100%;
   height: 100%;
   display: flex;
@@ -156,7 +156,7 @@ export const CardContainer = styled.div<{ $status: string }>`
     }
 
     > span {
-      display: flex;
+      display: ${({ $show }) => ($show === "yes" ? "flex" : "none")};
       justify-content: center;
       color: ${({ theme }) => theme.background};
       background: ${({ theme, $status }) =>
@@ -168,7 +168,7 @@ export const CardContainer = styled.div<{ $status: string }>`
       position: absolute;
       bottom: 10px;
       left: 10px;
-      width: 3.4rem;
+      width: 3.5rem;
     }
   }
 

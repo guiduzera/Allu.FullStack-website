@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const SearchBarContainer = styled.div`
-    border: 1px solid green;
     width: 100%;
     height: 10%;
     display: flex;
@@ -13,7 +12,7 @@ export const SearchBarContainer = styled.div`
         height: 50%;
         border: grey 1px solid;
         border-radius: 5rem;
-        padding: 0 1rem;
+        padding: 0 2rem;
     }
 
     > button {

@@ -1,13 +1,23 @@
 import { CardContainer } from "./styles";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+
+interface ProductCardProps {
+  showSpan: string;
+  spanPhrase: string;
+}
 
 /* eslint-disable @next/next/no-img-element */
-const ProductCard = () => {
-  const active = "active";
+const ProductCard = ({ showSpan, spanPhrase }: ProductCardProps) => {
   return (
-    <CardContainer $status="active">
+    <CardContainer $status="active" $show={ showSpan }>
       <div className="productInfosContainer">
         <h1>Iphone 15 pro max</h1>
-        <span>{active}</span>
+        <span>{spanPhrase}</span>
+        <AiOutlineShoppingCart size={30} style={{
+          position: "absolute",
+          bottom: "10px",
+          left: "80px",
+        }} />
         <p>R$ 15 000</p>
       </div>
       <div className="imageContainer">
