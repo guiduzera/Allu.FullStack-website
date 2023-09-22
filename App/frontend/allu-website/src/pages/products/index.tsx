@@ -1,10 +1,15 @@
 import Header from "@/components/Header";
+import SearchBar from "@/components/SearchBar";
+import { ProductsContainer } from "@/styles/productsStyles";
 
 export default function Products() {
   return (
-    <div>
+    <ProductsContainer>
       <Header />
-      <h1>Products</h1>
-    </div>
+      <SearchBar />
+      <div>
+        
+      </div>
+    </ProductsContainer>
   );
 }
