@@ -17,6 +17,10 @@ export const Container = styled.header`
     gap: 2rem;
     aling-items: center;
   }
+
+  @media (min-width: 768px) {
+    padding: 0 2rem;
+  }
 `;
 
 export const LinkContainer = styled.li<{ $isActive: boolean }>`

@@ -7,8 +7,8 @@ const Header = () => {
     <Container>
       <img src="/logo.png" alt="Allu Logo" />
       <ul>
-        <LinkHeader title="Profile" path="/" />
-        <LinkHeader title="Products" path="/products" includes />
+        <LinkHeader title="Perfil" path="/" />
+        <LinkHeader title="Loja" path="/products" includes />
       </ul>
     </Container>
   );
