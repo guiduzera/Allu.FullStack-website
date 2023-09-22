@@ -1,4 +1,5 @@
 import Header from '@/components/Header'
+import ProfileInfos from '@/components/ProfileInfos'
 import { HomeContainer } from '@/styles/HomeStyles'
 import Head from 'next/head'
 
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <main>
         <Header />
+        <ProfileInfos />
       </main>
     </HomeContainer>
   )
