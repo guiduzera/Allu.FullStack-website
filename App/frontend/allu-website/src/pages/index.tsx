@@ -1,3 +1,4 @@
+import Header from '@/components/Header'
 import { HomeContainer } from '@/styles/HomeStyles'
 import Head from 'next/head'
 
@@ -11,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
       <main>
-        <h1>Hello Word!!</h1>
+        <Header />
       </main>
     </HomeContainer>
   )
