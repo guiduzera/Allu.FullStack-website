@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <HomeContainer>
       <Head>
-        <title>Home | Profile</title>
+        <title>Allu | Profile</title>
         <meta name="description" content="informaçoes gerais do perfil" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.png" />
