@@ -4,6 +4,8 @@ import NextNProgress from 'nextjs-progressbar'
 import { Toaster } from 'react-hot-toast';
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -17,6 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
       />
       <Toaster position="bottom-right" />
       <Component {...pageProps} />
+      <Footer />
       <GlobalStyles />
     </ThemeProvider>
   )

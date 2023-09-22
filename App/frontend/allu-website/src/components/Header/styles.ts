@@ -3,6 +3,7 @@ import { lighten } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.header`
+  position: sticky;
   background: ${({ theme }) => theme.componentsBackground};
   width: 100%;
   display: flex;
