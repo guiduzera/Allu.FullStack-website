@@ -5,7 +5,9 @@ const SearchBar = () => {
   return (
     <SearchBarContainer>
       <input type="text" placeholder="Pequise um produto" />
-      <button type="submit"><TbShoppingBagSearch size={20} /></button>
+      <button type="submit">
+        <TbShoppingBagSearch size={20} />
+      </button>
     </SearchBarContainer>
   );
 };
