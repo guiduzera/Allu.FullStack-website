@@ -39,8 +39,54 @@ export const Container = styled.div`
         > h2 {
             font-size: 1.5rem;
             font-weight: 600;
-            font-family: Segoe UI;
             color: ${({ theme }) => theme.primary};
+        }
+    }
+
+    @media (min-width: 768px) {
+        > .titleContainer {
+            > h1 {
+                font-size: 3rem;
+            }
+        }
+
+        > .productContainer {
+            height: 20rem;
+
+            > h2 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        height: 100%;
+        flex-direction: row;
+        > .titleContainer {
+            width: 50%;
+            height: 100%;
+            gap: 4rem;
+            flex-direction: column;
+            > h1 {
+                font-size: 3rem;
+            }
+
+            > img {
+                width: 50%;
+                max-width: 80%;
+            }
+        }
+
+        > .productContainer {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            height: 100%;
+            width: 50%;
+            gap: 2rem;
+
+            > h2 {
+                font-size: 2rem;
+            }
         }
     }
 `;
@@ -69,7 +115,6 @@ export const CardContainer = styled.div<{ $status: string }>`
             max-width: 100%;
             height: 100%;
             max-height: 100%;
-            object-fit: cover;
             border-radius: 0.5rem;
         }
     }
@@ -107,6 +152,75 @@ export const CardContainer = styled.div<{ $status: string }>`
             bottom: 10px;
             left: 10px;
             width: 3.4rem;
+        }
+    }
+
+    @media (min-width: 768px) {
+        > .productInfosContainer {
+            justify-content: center;
+            gap: 1rem;
+
+            > h1 {
+                font-size: calc(2rem + 0.5vw);
+            }
+
+            > p {
+                font-size: calc(1rem + 0.5vw);
+            }
+
+            > span {
+                font-size: 1.5rem;
+                width: 5rem;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        width: 80%;
+        height: 20%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+
+        > .imageContainer {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            > img {
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+                max-height: 100%;
+                border-radius: 0.5rem;
+            }
+        }
+
+        > .productInfosContainer {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            gap: 0.5rem;
+
+            > h1 {
+                font-size: calc(1.2rem + 0.5vw);
+            }
+
+            > p {
+                font-size: calc(0.5rem + 0.5vw);
+            }
+
+            > span {
+                font-size: 1rem;
+                width: 4rem;
+            }
         }
     }
 `;
