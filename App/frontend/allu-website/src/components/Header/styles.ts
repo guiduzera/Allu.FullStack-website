@@ -9,7 +9,7 @@ export const Container = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
-  height: 4rem;
+  height: 10%;
   boder-bottom: 1px solid grey;
 
   ul {

@@ -12,9 +12,11 @@ const ProfileInfos = () => {
 			</div>
 			<div className="productContainer">
 				<h2>Minhas Assinaturas</h2>
-				<ProductCard />
-				<ProductCard />
-				<ProductCard />
+				<div className="productLimit">
+					<ProductCard />
+					<ProductCard />
+					<ProductCard />
+				</div>
 			</div>
     </Container>
   );

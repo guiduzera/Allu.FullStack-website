@@ -13,9 +13,7 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
       <Header />
-      <main>
-        <ProfileInfos />
-      </main>
+      <ProfileInfos />
     </HomeContainer>
   )
 }

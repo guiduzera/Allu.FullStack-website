@@ -20,6 +20,8 @@ export default createGlobalStyle`
     }
   }
   body {
+    width: 100vw;
+    height: 100vh;
     background: ${props => props.theme.background};
     font: 400 1rem 'Montserrat', sans-serif;
   }

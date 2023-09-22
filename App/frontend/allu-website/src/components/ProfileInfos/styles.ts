@@ -56,13 +56,20 @@ export const Container = styled.div`
             > h2 {
                 font-size: 2rem;
             }
+
+            > .productLimit {
+                width: 80%;
+            }
         }
     }
 
     @media (min-width: 1024px) {
-        height: 100%;
         flex-direction: row;
+        padding: 0;
+        gap: 0;
         > .titleContainer {
+            padding-top: 1rem;
+            align-items: flex-center;
             width: 50%;
             height: 100%;
             gap: 4rem;
@@ -80,12 +87,21 @@ export const Container = styled.div`
         > .productContainer {
             flex-wrap: nowrap;
             flex-direction: column;
-            height: 100%;
+            align-items: center;
+            height: 32.5rem;
             width: 50%;
-            gap: 2rem;
+            gap: 1;
+            padding-top: 1rem;
 
             > h2 {
                 font-size: 2rem;
+            }
+
+            > .productLimit {
+                padding: 1rem;
+                width: 70%;
+                height: 90%;
+                overflow-y: scroll;
             }
         }
     }
@@ -176,12 +192,12 @@ export const CardContainer = styled.div<{ $status: string }>`
     }
 
     @media (min-width: 1024px) {
-        width: 80%;
-        height: 20%;
+        width: 100%;
+        height: 30%;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-bottom: 0;
+        margin-bottom: 1rem;
 
         > .imageContainer {
             width: 40%;
