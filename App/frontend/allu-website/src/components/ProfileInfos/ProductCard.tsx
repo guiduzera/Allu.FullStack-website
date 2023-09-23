@@ -55,8 +55,6 @@ const ProductCard = ({ showSpan, spanPhrase, profile }: ProductCardProps) => {
       localStorage.setItem("cart", JSON.stringify(newCart));
       setResearch(!research);
     }
-
-    console.log(research);
   };
 
   return (

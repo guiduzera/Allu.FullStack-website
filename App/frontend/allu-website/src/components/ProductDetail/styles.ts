@@ -56,5 +56,43 @@ export const ProductDetailContainer = styled.div`
       font-weight: 600;
       cursor: pointer;
     }
+
+    > .turnBackButton {
+      color: ${({ theme }) => theme.componentsBackground};
+      cursor: pointer;
+      margin-right: auto;
+    }
+  }
+
+  @media (min-width: 768px) {
+    > .contentContainer {
+      > .turnBackButton {
+        margin-right: 38rem;
+      }
+    }
+
+    > .imageContainer {
+
+      > img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    > .contentContainer {
+      > .turnBackButton {
+        margin-right: 90rem;
+      }
+
+      > h1 {
+        font-size: 2rem;
+      }
+
+      > p {
+        font-size: 1.2rem;
+        width: 80%;
+      }
+    }
   }
 `;
