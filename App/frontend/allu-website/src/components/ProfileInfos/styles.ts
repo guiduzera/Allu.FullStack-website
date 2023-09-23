@@ -182,6 +182,15 @@ export const CardContainer = styled.div<{ $status: string, $show: boolean }>`
     }
   }
 
+  @media (max-width: 376px) {
+    > .productInfosContainer {
+      > .nowMore {
+        bottom: 15px;
+        right: 130px;
+      }
+    }
+  }
+
   @media (min-width: 768px) {
     > .productInfosContainer {
       justify-content: center;
