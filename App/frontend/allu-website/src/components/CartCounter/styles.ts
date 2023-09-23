@@ -31,4 +31,34 @@ export const Container = styled.div`
     height: 30px;
     width: 30px;
   }
+
+  @media (min-width: 768px) {
+    right: 460px;
+    bottom: 8px;
+
+    > div > .arrow-left {
+      height: 40px;
+      width: 40px;
+    }
+  
+    > div > .arrow-right {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    right: 560px;
+    bottom: 8px;
+
+    > div > .arrow-left {
+      height: 50px;
+      width: 50px;
+    }
+  
+    > div > .arrow-right {
+      height: 50px;
+      width: 50px;
+    }
+  }
 `;
