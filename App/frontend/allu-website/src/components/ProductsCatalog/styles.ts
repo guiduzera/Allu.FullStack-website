@@ -23,7 +23,7 @@ export const CatalogContainer = styled.div`
 
   @media (min-width: 1024px) {
     > .catalogLimit {
-      width: 80%;
+      width: 60%;
       height: 40rem;
     }
   }
@@ -98,6 +98,7 @@ export const FilterContainer = styled.div`
   }
 
   @media (min-width: 1024px) {
+    padding-left: 8rem;
     .orderingContainer {
       flex-direction: row;
       justify-content: center;
