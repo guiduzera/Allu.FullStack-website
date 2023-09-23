@@ -27,4 +27,10 @@ export const SearchBarContainer = styled.div`
             width: 60%;
         }
     }
+
+    @media (min-width: 1024px) {
+        > input {
+            width: 50%;
+        }
+    }
 `;

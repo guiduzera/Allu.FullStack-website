@@ -1,23 +1,34 @@
+import { useRouter } from "next/router";
 import { CardContainer } from "./styles";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
 interface ProductCardProps {
-  showSpan: string;
+  showSpan: boolean;
   spanPhrase: string;
+  profile: boolean;
 }
 
 /* eslint-disable @next/next/no-img-element */
-const ProductCard = ({ showSpan, spanPhrase }: ProductCardProps) => {
+const ProductCard = ({ showSpan, spanPhrase, profile }: ProductCardProps) => {
+  const router = useRouter();
+
+  const handleCardClick = ({ target }: any) => {
+    if (profile) return;
+    if (target.id === "cart") return console.log("cart");
+    router.push("/checkout");
+  };
+
   return (
     <CardContainer $status="active" $show={ showSpan }>
       <div className="productInfosContainer">
         <h1>Iphone 15 pro max</h1>
-        <span>{spanPhrase}</span>
-        <AiOutlineShoppingCart size={30} style={{
+        <span onClick={handleCardClick}>{spanPhrase}</span>
+        {!profile && (<AiOutlineShoppingCart size={30} style={{
           position: "absolute",
           bottom: "10px",
           left: "80px",
-        }} className="cartLogo" />
+        }} className="cartLogo" id='cart' onClick={handleCardClick} />)}
+        {profile && (<p>quantidade: 1</p>)}
         <p>R$ 15 000</p>
       </div>
       <div className="imageContainer">

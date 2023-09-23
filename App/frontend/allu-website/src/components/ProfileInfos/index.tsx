@@ -16,9 +16,9 @@ const ProfileInfos = () => {
       <div className="productContainer">
         <h2>Minhas Assinaturas</h2>
         <div className="productLimit">
-          <ProductCard showSpan="yes" spanPhrase="Ativo" />
-          <ProductCard showSpan="yes" spanPhrase="Ativo" />
-          <ProductCard showSpan="yes" spanPhrase="Ativo" />
+          <ProductCard showSpan spanPhrase="Ativo" profile />
+          <ProductCard showSpan spanPhrase="Ativo" profile />
+          <ProductCard showSpan spanPhrase="Ativo" profile />
         </div>
       </div>
     </Container>

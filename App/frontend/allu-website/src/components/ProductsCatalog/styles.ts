@@ -20,6 +20,13 @@ export const CatalogContainer = styled.div`
       height: 16rem;
     }
   }
+
+  @media (min-width: 1024px) {
+    > .catalogLimit {
+      width: 80%;
+      height: 40rem;
+    }
+  }
 `;
 
 export const FilterContainer = styled.div`
@@ -88,5 +95,13 @@ export const FilterContainer = styled.div`
 
   @media (min-width: 768px) {
     justify-content: center;
+  }
+
+  @media (min-width: 1024px) {
+    .orderingContainer {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
   }
 `;

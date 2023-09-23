@@ -6,10 +6,10 @@ const ProductsCatalog = () => {
   return (
     <CatalogContainer>
       <div className="catalogLimit">
-        <ProductCard showSpan="yes" spanPhrase="Assinar" />
-        <ProductCard showSpan="yes" spanPhrase="Assinar" />
-        <ProductCard showSpan="yes" spanPhrase="Assinar" />
-        <ProductCard showSpan="yes" spanPhrase="Assinar" />
+        <ProductCard showSpan spanPhrase="Assinar" profile={false} />
+        <ProductCard showSpan spanPhrase="Assinar" profile={false} />
+        <ProductCard showSpan spanPhrase="Assinar" profile={false} />
+        <ProductCard showSpan spanPhrase="Assinar" profile={false} />
       </div>
     </CatalogContainer>
   )

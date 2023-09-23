@@ -99,16 +99,16 @@ export const Container = styled.div`
       }
 
       > .productLimit {
-        padding: 1rem;
+        height: 100%;
         width: 70%;
-        height: 90%;
+        padding: 1rem;
         overflow-y: scroll;
       }
     }
   }
 `;
 
-export const CardContainer = styled.div<{ $status: string, $show: string }>`
+export const CardContainer = styled.div<{ $status: string, $show: boolean }>`
   width: 100%;
   height: 100%;
   display: flex;
@@ -156,7 +156,7 @@ export const CardContainer = styled.div<{ $status: string, $show: string }>`
     }
 
     > span {
-      display: ${({ $show }) => ($show === "yes" ? "flex" : "none")};
+      display: ${({ $show }) => ($show ? "flex" : "none")};
       justify-content: center;
       color: ${({ theme }) => theme.background};
       background: ${({ theme, $status }) =>

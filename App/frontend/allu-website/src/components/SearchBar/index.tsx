@@ -9,9 +9,6 @@ const SearchBar = () => {
         <TbShoppingBagSearch style={{  
           fontSize: "2rem",
           cursor: "pointer",
-          '@media (mix-width: 768px)': {
-            fontSize: "5rem",
-          },
         }} />
       </button>
     </SearchBarContainer>
