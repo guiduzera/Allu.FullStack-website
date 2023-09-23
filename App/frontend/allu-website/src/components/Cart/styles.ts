@@ -12,7 +12,7 @@ export const CartContainer = styled.div`
   height: 80px;
   background-color: ${({ theme }) => theme.error};
   filter: alpha(opacity=50);
-  opacity: 0.5;
+  opacity: 0.8;
 
   display: flex;
   justify-content: center;

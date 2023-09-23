@@ -1,31 +1,30 @@
 import { FiShoppingBag } from 'react-icons/fi'
 import { CartContainer } from './styles'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import CartContext from '@/context/cartContext'
 
 const Cart = () => {
-  const [cart, setCart] = useState([{ id: 0, quantity: 0, price: 0, name: '', image: '' }])
-  const [appearCounter, setAppearCounter] = useState(false)
+  const [cart, setCart] = useState([])	
+  const [research] = useContext(CartContext)
   const [quantity, setQuantity] = useState(0)
   useEffect(() => {
-    //puxar o conteúdo do LocalStorage
-    const cart = localStorage.getItem('cart')
+    const localCart = localStorage.getItem('cart')
 
-    if (!cart) return;
+    if (!localCart) return;
 
-    const cartParsed = JSON.parse(cart)
+    const cart = JSON.parse(localCart)
 
-    if (cartParsed.length > 0) {
-      setAppearCounter(true)
-      const quantity = cartParsed.map((item: any) => item.quantity)
+    if (cart.length > 0) {
+      const quantity = cart.map((item: any) => item.quantity)
       const totalQuantity = quantity.reduce((acc: any, curr: any) => acc + curr)
       setQuantity(totalQuantity)
-      setCart(cartParsed)
+      setCart(cart)
     }
-  }, [localStorage.getItem('cart')])
+  }, [research]) 
 
   return (
     <CartContainer>
-      {appearCounter && <span>{quantity}</span>}
+      <span>{quantity}</span>
       <FiShoppingBag className="cartIconPopUp" />
     </CartContainer>
   )
