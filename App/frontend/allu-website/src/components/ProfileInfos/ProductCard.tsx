@@ -16,14 +16,6 @@ const ProductCard = ({ showSpan, spanPhrase, profile }: ProductCardProps) => {
   const router = useRouter();
   const [research, setResearch] = useContext(CartContext);
 
-  const handleSpanClick = () => {
-    if (spanPhrase === "Assinar") {
-      router.push("/checkout");
-    }
-
-    return;
-  };
-
   const handlerCartClick = () => {
     //nutrir o LocalStorage
     const stringCart = localStorage.getItem("cart");
@@ -55,6 +47,15 @@ const ProductCard = ({ showSpan, spanPhrase, profile }: ProductCardProps) => {
       localStorage.setItem("cart", JSON.stringify(newCart));
       setResearch(!research);
     }
+  };
+
+  const handleSpanClick = () => {
+    if (spanPhrase === "Assinar") {
+      handlerCartClick();
+      router.push("/checkout");
+    }
+
+    return;
   };
 
   return (
