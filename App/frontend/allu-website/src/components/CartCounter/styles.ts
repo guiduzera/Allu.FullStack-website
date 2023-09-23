@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   position: absolute;
-  bottom: 10px;
+  bottom: 8px;
   right: 160px;
   display: flex;
   justify-content: center;
