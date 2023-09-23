@@ -3,6 +3,7 @@ import { CardContainer } from "./styles";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useContext } from "react";
 import CartContext from "@/context/cartContext";
+import { BsArrowRightShort } from "react-icons/bs";
 
 interface ProductCardProps {
   showSpan: boolean;
@@ -68,6 +69,7 @@ const ProductCard = ({ showSpan, spanPhrase, profile }: ProductCardProps) => {
           bottom: "10px",
           left: "80px",
         }} className="cartLogo" id='cart' onClick={handlerCartClick} />)}
+        <p className="nowMore" onClick={() => router.push('/details/1')}>Saiba mais<BsArrowRightShort /></p>
         {profile && (<p>quantidade: 1</p>)}
         <p>R$ 15 000</p>
       </div>

@@ -155,6 +155,16 @@ export const CardContainer = styled.div<{ $status: string, $show: boolean }>`
       color: red;
     }
 
+    > .nowMore {
+      display: flex;
+      align-items: center;
+
+      position: absolute;
+      color: black;
+      bottom: 15px;
+      right: 160px;
+    }
+
     > span {
       display: ${({ $show }) => ($show ? "flex" : "none")};
       justify-content: center;
@@ -196,6 +206,11 @@ export const CardContainer = styled.div<{ $status: string, $show: boolean }>`
         left: 110px !important;
         width: 2rem;
         height: 2rem;
+      }
+
+      > .nowMore {
+        bottom: 15px;
+        right: 450px;
       }
     }
   }
@@ -245,6 +260,11 @@ export const CardContainer = styled.div<{ $status: string, $show: boolean }>`
       > span {
         font-size: 1rem;
         width: 4rem;
+      }
+
+      > .nowMore {
+        bottom: 15px;
+        right: 575px;
       }
     }
   }
