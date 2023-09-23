@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import { CardContainer } from "./styles";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import CartCounter from "../CartCounter";
+import { useState } from "react";
 
 interface ProductCardProps {
   showSpan: boolean;
@@ -10,11 +12,15 @@ interface ProductCardProps {
 
 /* eslint-disable @next/next/no-img-element */
 const ProductCard = ({ showSpan, spanPhrase, profile }: ProductCardProps) => {
+  const [cartCounterAppear, setCartCounterAppear] = useState(false);
   const router = useRouter();
 
   const handleCardClick = ({ target }: any) => {
     if (profile) return;
-    if (target.id === "cart") return console.log("cart");
+    if (target.id === "cart") {
+      setCartCounterAppear(!cartCounterAppear);
+      return;
+    }
     router.push("/checkout");
   };
 
@@ -28,6 +34,7 @@ const ProductCard = ({ showSpan, spanPhrase, profile }: ProductCardProps) => {
           bottom: "10px",
           left: "80px",
         }} className="cartLogo" id='cart' onClick={handleCardClick} />)}
+        {cartCounterAppear && <CartCounter />}
         {profile && (<p>quantidade: 1</p>)}
         <p>R$ 15 000</p>
       </div>
