@@ -10,6 +10,7 @@ export const CheckoutComponent = () => {
   const router = useRouter();
   const [research, setResearch] = useContext(CartContext)
   const [cart, setCart] = useState([]);
+  const [total, setTotal] = useState(0);
   const [finish, setFinish] = useState(false);
   useEffect(() => {
     //captar o localstorage
@@ -21,6 +22,10 @@ export const CheckoutComponent = () => {
 
     if (cart.length === 0) {
       router.push("/products");
+    }
+
+    if (cart.length > 0) {
+      calcTotal();
     }
 
     setCart(cart);
@@ -57,6 +62,11 @@ export const CheckoutComponent = () => {
       return item;
     });
 
+    if (newCart.some((item: any) => item.quantity === 0)) {
+      handleDelete(id);
+      return;
+    }
+
     localStorage.setItem("cart", JSON.stringify(newCart));
     setCart(newCart);
     setResearch(!research)
@@ -73,6 +83,17 @@ export const CheckoutComponent = () => {
     localStorage.setItem("cart", JSON.stringify(newCart));
     setCart(newCart);
     setResearch(!research)
+  };
+
+  const calcTotal = () => {
+    const localCart = localStorage.getItem("cart");
+
+    if (!localCart) return;
+
+    const cart = JSON.parse(localCart);
+    const total = cart.map((item: any) => item.price * item.quantity);
+    const totalValue = total.reduce((acc: any, curr: any) => acc + curr);
+    setTotal(totalValue);
   };
 
   return (
@@ -106,7 +127,7 @@ export const CheckoutComponent = () => {
           );
         })}
         <FinishContainer>
-          <h2>Total: R$ 200,00</h2>
+          <h2>Total: R$ {total}</h2>
           <button type="button" className="finishButton" onClick={() => setFinish(!finish)}>
             Finalizar Compra
           </button>
