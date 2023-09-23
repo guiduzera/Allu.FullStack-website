@@ -22,4 +22,26 @@ export const CartContainer = styled.div`
     width: 50%;
     height: 50%;
   }
+
+  @media (min-width: 768px) {
+    width: 100px;
+    height: 100px;
+    top: 180px;
+
+    > .cartIconPopUp {
+      width: 60%;
+      height: 60%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    width: 120px;
+    height: 120px;
+    top: 250px;
+
+    > .cartIconPopUp {
+      width: 70%;
+      height: 70%;
+    }
+  }
 `;
