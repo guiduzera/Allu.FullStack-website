@@ -20,12 +20,15 @@ const Cart = () => {
       const totalQuantity = quantity.reduce((acc: any, curr: any) => acc + curr)
       setQuantity(totalQuantity)
     }
-  }, [research]) 
+  }, [research])
 
   return (
-    <CartContainer>
-      <span>{quantity}</span>
-      <FiShoppingBag className="cartIconPopUp" onClick={() => router.push('/checkout')} />
+    <CartContainer onClick={() => router.push('/checkout')}>
+      <div>
+        <span className='quantity'>{quantity}</span>
+        <FiShoppingBag className="cartIconPopUp" />
+      </div>
+      <span className="cartText">Ir para checkout!</span>
     </CartContainer>
   )
 }
