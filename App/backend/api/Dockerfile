@@ -2,13 +2,13 @@ FROM node:16-alpine
 
 WORKDIR /backend/api
 
-COPY package.json ./
+COPY package* ./
 
 RUN ["npm", "i"]
 
 ENV NODE_OPTIONS=--max-http-header-size=30000
 
-COPY ./ ./
+COPY . .
 
 EXPOSE 3001
 

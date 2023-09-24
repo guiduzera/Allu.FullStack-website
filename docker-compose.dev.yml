@@ -2,7 +2,7 @@ version: '3.9'
 services:
   frontend:
     env_file:
-      - ./App/frontend/allu-website.env.local
+      - ./App/frontend/allu-website/.env.local
     container_name: frontend
     build: ./App/frontend/allu-website
     networks:
@@ -10,10 +10,10 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./frontend/src:/frontend/src
+      - ./App/frontend/allu-website/src:/frontend/src
     platform: linux/x86_64
     working_dir: /frontend
-    command: npm start
+    command: npm run dev
     depends_on:
       api:
         condition: service_healthy
@@ -23,21 +23,18 @@ services:
       test: ["CMD", "lsof", "-t", "-i:3000"]  # Caso utilize outra porta interna para o front, altere ela aqui também
       timeout: 10s
       retries: 5
-      security:
-        condition: service_healthy
   api:
     env_file:
       - ./App/backend/api/.env.local
-    container_name: backend
+    container_name: api
     build: ./App/backend/api
     networks:
       - frontend
       - database
-      -	security
     ports:
       - 3001:3001
     volumes:
-      - ./backend/api
+      - ./App/backend/api:/backend/api
     platform: linux/x86_64
     working_dir: /backend/api
     command: npm run dev
@@ -64,11 +61,10 @@ services:
       networks:
         - frontend
         - database
-        -	api
       ports:
-        - 3002:3002
+        - 3004:3002
       volumes:
-        - ./backend/security
+        - ./App/backend/security:/backend/security
       platform: linux/x86_64
       working_dir: /backend/security
       command: npm run dev
@@ -114,4 +110,4 @@ networks:
   frontend:
   database:
   api:
-  backend:
+  security:
