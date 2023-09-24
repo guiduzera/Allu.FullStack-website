@@ -13,22 +13,23 @@ datasource db {
 
 model Products {
   id          Int      @id @default(autoincrement())
-  name        String
-  description String
+  name        String   @unique
+  description String   @db.LongText
   price       Float
-  image       String
+  image       String   @db.LongText
 
   @@map("products")
 }
 
 model Orders {
   id          Int      @id @default(autoincrement())
-  user_id     Int     @unique
+  user_id     Int
   date        DateTime @default(now())
   status      String
   document    String
   total       Float
   product_id  Int
+  image       String
   quantity    Int
 
   @@map("orders")
