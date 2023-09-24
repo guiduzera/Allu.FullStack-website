@@ -4,8 +4,6 @@
     "description": "",
     "main": "init.js",
     "scripts": {
-      "start": "node init.js",
-      "test": "echo \"Error: no test specified\" && exit 1",
       "compose:up": "docker-compose -f docker-compose.dev.yml up -d --build",
       "compose:down": "docker-compose -f docker-compose.dev.yml down --rmi local -v --remove-orphans",
       "compose:restart": "docker-compose -f docker-compose.dev.yml restart",

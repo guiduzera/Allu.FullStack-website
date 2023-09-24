@@ -2,7 +2,7 @@ version: '3.9'
 services:
   frontend:
     env_file:
-      - ./App/frontend/allu-website/.env.local
+      - ./App/frontend/allu-website/.env
     container_name: frontend
     build: ./App/frontend/allu-website
     networks:
@@ -25,7 +25,7 @@ services:
       retries: 5
   api:
     env_file:
-      - ./App/backend/api/.env.local
+      - ./App/backend/api/.env
     container_name: api
     build: ./App/backend/api
     networks:
@@ -55,7 +55,7 @@ services:
       retries: 5
   security:
       env_file:
-        - ./App/backend/security/.env.local
+        - ./App/backend/security/.env
       container_name: security
       build: ./App/backend/security
       networks:

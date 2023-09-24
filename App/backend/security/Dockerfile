@@ -2,7 +2,7 @@ FROM node:16-alpine
 
 WORKDIR /backend/security
 
-COPY package* ./
+COPY package.json ./
 
 RUN ["npm", "i"]
 

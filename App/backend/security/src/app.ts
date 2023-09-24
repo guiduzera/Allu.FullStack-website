@@ -1,4 +1,4 @@
-import express, { Express } from 'express';
+import express, {Express} from 'express';
 import cors from 'cors';
 // import Router from './routes/Router';
 // import UniversalErrorMiddleware from './middlewares/UniversalErrorMiddleware';
@@ -18,10 +18,18 @@ class App {
   }
 
   private config(): void {
+    const accessControl: express.RequestHandler = (req, res, next) => {
+      res.header('Access-Control-Allow-Origin', '*');
+      res.header('Access-Control-Allow-Methods', 'GET,POST,DELETE,OPTIONS,PUT,PATCH');
+      res.header('Access-Control-Allow-Headers', '*');
+
+      next();
+    };
+
     this.app.use(express.json());
+    this.app.use(accessControl);
+    //this.app.use(router);
     this.app.use(cors());
-    // this.app.use(this.routerClass.router);
-    // this.app.use(UniversalErrorMiddleware.handleErrors);
   }
 
   public start(PORT: number | string): void {
