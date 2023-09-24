@@ -22,7 +22,11 @@ const DragAndDrop = () => {
   };
   return (
     <FilesDragAndDrop>
-      <FileUploader handleChange={handleChange} name="file" types={fileTypes} multiple={true} />
+      <FileUploader handleChange={handleChange} name="file" required types={fileTypes} multiple={true} className="dropArea" children={
+        <div className='FilesDragAndDrop__area'>
+        <p>Arraste e solte o arquivo aqui</p>
+      </div>
+      } />
       <p>{file ? `Arquivo: ${file[0].name}` : "Não há arquivos ainda"}</p>
       {file && <button type="button" onClick={handleConfirm}>Confirmar</button>}
     </FilesDragAndDrop>

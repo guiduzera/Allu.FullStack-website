@@ -18,6 +18,7 @@ export const ChackoutContainer = styled.div`
 			flex-direction: column;
 			align-items: center;
 			gap: 1rem;
+			padding: 0.5rem;
 		}
 
 		> .cardsLimit > .cardBoard {
@@ -32,11 +33,12 @@ export const ChackoutContainer = styled.div`
 
 			> .imageContainer {
 				width: 30%;
+				height: 100%;
 	
 				> img {
 					width: 100%;
 					height: 100%;
-					object-fit: cover;
+					object-fit: contain;
 				}
 			}
 	
@@ -100,6 +102,74 @@ export const ChackoutContainer = styled.div`
 				}
 			}
 		}
+
+		@media (max-width: 376px) {
+			> .cardsLimit > .cardBoard > .cardInfos {
+				h2 {
+					font-size: 1rem;
+				}
+			}
+		}
+
+		@media (min-width: 768px) {
+			> .cardsLimit > .cardBoard {
+				height: 50%;
+			}
+			> .cardsLimit > .cardBoard > .cardInfos {
+				h2 {
+					font-size: 2.5rem;
+				}
+
+				p {
+					font-size: 2rem;
+				}
+
+				> .controlersContainer {
+					height: 5rem;
+
+					> .addLessButton {
+						width: 3rem;
+						height: 3rem;
+						font-size: 1.5rem;
+					}
+
+					> p {
+						font-size: 2rem;
+					}
+
+					> .removeButton {
+						width: 3rem;
+						height: 3rem;
+						font-size: 1.5rem;
+					}
+				}
+			}
+		}
+
+		@media (min-width: 1024px) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			> .cardsLimit {
+				width: 80%;
+				height: 100%;
+
+				> .cardBoard {
+					height: 30%;
+
+					> .imageContainer {
+						width: 20%;
+
+						> img {
+							width: 100%;
+							height: 100%;
+							object-fit: contain;
+						}
+					}
+				}
+			}
+		}
   }
 `;
 
@@ -129,6 +199,36 @@ export const FinishContainer = styled.div`
 		font-weight: 600;
 		cursor: pointer;
 	}
+
+	@media (min-width: 768px) {
+		> h2 {
+			padding-top: 1rem;
+			font-size: 2rem;
+		}
+
+		> .finishButton {
+			width: 50%;
+			height: 3rem;
+			font-size: 1.5rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		width: 50%;
+		height: 100%;
+		padding: 0;
+
+		> h2 {
+			padding-top: 1rem;
+			font-size: 2rem;
+		}
+
+		> .finishButton {
+			width: 50%;
+			height: 3rem;
+			font-size: 1.5rem;
+		}
+	}
 `;
 
 export const FilesDragAndDrop = styled.div`
@@ -139,6 +239,20 @@ export const FilesDragAndDrop = styled.div`
 	width: 100%;
 	height: 50%;
 	gap: 1rem;
+
+	.FilesDragAndDrop__area {
+    width: 20rem;
+    height: 5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    font-size: 0.8rem;
+    color: ${({ theme }) => theme.primary};
+    border: 2px dashed ${({ theme }) => theme.primary};
+    border-radius: 12px;
+  }
 
 	> p {
 		font-size: 1rem;
@@ -156,5 +270,35 @@ export const FilesDragAndDrop = styled.div`
 		font-size: 1rem;
 		font-weight: 600;
 		cursor: pointer;
+	}
+
+	@media (min-width: 768px) {
+		> p {
+			font-size: 2rem;
+		}
+
+		> button {
+			font-size: 1.8rem;
+		}
+
+		.FilesDragAndDrop__area {
+			width: 30rem;
+			height: 8rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		> p {
+			font-size: 2rem;
+		}
+
+		> button {
+			font-size: 1.8rem;
+		}
+
+		.FilesDragAndDrop__area {
+			width: 30rem;
+			height: 15rem;
+		}
 	}
 `;

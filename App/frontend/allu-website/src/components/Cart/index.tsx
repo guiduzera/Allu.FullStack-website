@@ -8,6 +8,7 @@ const Cart = () => {
   const router = useRouter()
   const [research] = useContext(CartContext)
   const [quantity, setQuantity] = useState(0)
+
   useEffect(() => {
     const localCart = localStorage.getItem('cart')
 
