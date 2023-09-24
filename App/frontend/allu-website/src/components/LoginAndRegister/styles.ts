@@ -33,6 +33,21 @@ export const LoginAndRegisterContainer = styled.div`
       justify-content: center;
     }
   }
+
+  @media (min-width: 768px) {
+    padding-top: 10rem;
+
+    > .frontContainer {
+      > div {
+        width: 50%;
+        height: 50%;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    padding-top: 5rem;
+  }
 `;
 
 export const FormsContainer = styled.div`
@@ -95,5 +110,37 @@ export const FormsContainer = styled.div`
       font-weight: 600;
       cursor: pointer;
     }
+  }
+
+  @media (min-width: 768px) {
+    width: 60%;
+    height: 50%;
+
+    > span {
+      font-size: 1.5rem;
+
+      > button {
+        font-size: 1.5rem;
+      }
+    }
+
+    > form {
+      height: 60%;
+
+      > input {
+        height: 2.5rem;
+        font-size: 1.5rem;
+      }
+
+      > button {
+        height: 2.5rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    width: 40%;
+    height: 60%;
   }
 `;
