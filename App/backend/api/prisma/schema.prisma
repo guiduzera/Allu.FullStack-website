@@ -3,9 +3,33 @@
 
 generator client {
   provider = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-1.1.x", "windows", "linux-musl"]
 }
 
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+model Products {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  price       Float
+  image       String
+
+  @@map("products")
+}
+
+model Orders {
+  id          Int      @id @default(autoincrement())
+  user_id     Int     @unique
+  date        DateTime @default(now())
+  status      String
+  document    String
+  total       Float
+  product_id  Int
+  quantity    Int
+
+  @@map("orders")
 }
