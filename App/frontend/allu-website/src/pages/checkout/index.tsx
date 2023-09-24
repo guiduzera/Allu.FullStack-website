@@ -1,3 +1,4 @@
+import Cart from "@/components/Cart";
 import Header from "@/components/Header";
 import CheckoutComponent from "@/components/checkoutComponent";
 import { CheckutContainer } from "@/styles/checkoutStyles";
@@ -12,6 +13,7 @@ export default function Checkout() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.png" />
       </Head>
+      <Cart />
       <Header />
       <CheckoutComponent />
     </CheckutContainer>

@@ -1,3 +1,4 @@
+import Cart from "@/components/Cart";
 import Header from "@/components/Header";
 import ProductDetail from "@/components/ProductDetail";
 import { DetailsContainer } from "@/styles/detailsStyles";
@@ -12,6 +13,7 @@ export default function Details() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.png" />
       </Head>
+      <Cart />
       <Header />
       <ProductDetail />
     </DetailsContainer>

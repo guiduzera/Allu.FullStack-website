@@ -5,7 +5,6 @@ import { Toaster } from 'react-hot-toast';
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'
 import Footer from '@/components/Footer';
-import Cart from '@/components/Cart';
 import CartContext from '@/context/cartContext';
 import { useState } from 'react';
 
@@ -23,7 +22,6 @@ export default function App({ Component, pageProps }: AppProps) {
       />
       <Toaster position="bottom-right" />
       <CartContext.Provider value={[research, setResearch]}>
-        <Cart />
         <Component {...pageProps} />
         <Footer />
       </CartContext.Provider>

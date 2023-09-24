@@ -6,6 +6,7 @@ import { useContext, useEffect } from "react";
 import { ProductsCatalogContainer, ProductsContainer } from "@/styles/productsStyles";
 import Head from "next/head";
 import CartContext from "@/context/cartContext";
+import Cart from "@/components/Cart";
 
 export default function Products() {
   const [research, setResearch] = useContext(CartContext);
@@ -25,6 +26,7 @@ export default function Products() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.png" />
       </Head>
+      <Cart />
       <Header />
       <SearchBar />
       <ProductsFilter />
