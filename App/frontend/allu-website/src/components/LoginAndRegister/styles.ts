@@ -76,7 +76,7 @@ export const FormsContainer = styled.div`
 
   > form {
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
