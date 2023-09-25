@@ -1,16 +1,16 @@
 import express from 'express';
-// import SecurityRoutes from './security.routes';
+import ProductsRoutes from './products.routes';
 
 export default class Router {
   public router = express.Router();
-//   private _securityRoutes: SecurityRoutes;
+  private _productsRoutes: ProductsRoutes;
 
   constructor() {
-    // this._securityRoutes = new SecurityRoutes();
+    this._productsRoutes = new ProductsRoutes();
     this.routes();
   }
 
   private routes(): void {
-    // this.router.use('/security', this._securityRoutes.router);
+    this.router.use('/products', this._productsRoutes.router);
   }
 }

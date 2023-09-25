@@ -11,10 +11,10 @@ export default class SharedMiddlewares {
         return res.status(400).json({ message: "Token não enviado!" });
       }
 
-      const securityService = Requests.getJwtAuth(authorization);
+      const securityService = await Requests.getJwtAuth(authorization);
 
       if (!securityService) {
-        return res.status(401).json({ message: "Token inválido!" });
+        return res.status(400).json({ message: "Token inválido!" });
       }
 
       req.user = securityService as unknown as { id: number; name: string | null; email: string};

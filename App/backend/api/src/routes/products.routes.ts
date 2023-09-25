@@ -1,26 +1,23 @@
 import express from 'express';
-// import SecurityService from '../services/security.service';
-// import SecurityController from '../controller/security.controller';
-// import SecurityModel from '../model/security.model';
-// import prisma from '../../prisma/client';
-// import SecurityMiddlewares from '../middlewares/security.middlewares';
-
-export default class SecurityRoutes {
+import ProductsModel from '../model/products.model';
+import ProductsService from '../services/products.service';
+import ProductsController from '../controllers/products.controller';
+import prisma from '../../prisma/client';
+import SharedMiddlewares from '../middlewares/shared.middlewares';
+export default class ProductsRoutes {
   public router = express.Router();
-//   private _securityModel: SecurityModel;
-//   private _securityService: SecurityService;
-//   private _securityController: SecurityController;
+  private _productsModel: ProductsModel;
+  private _productsService: ProductsService;
+  private _productsController: ProductsController;
 
   constructor() {
-    // this._securityModel = new SecurityModel(prisma);
-    // this._securityService = new SecurityService(this._securityModel, this._jwt, this._bcrypt);
-    // this._securityController = new SecurityController(this._securityService);
+    this._productsModel = new ProductsModel(prisma);
+    this._productsService = new ProductsService(this._productsModel);
+    this._productsController = new ProductsController(this._productsService);
     this.userRoutes();
   }
 
   private userRoutes(): void {
-    // this.router.post('/register', SecurityMiddlewares.verifyFields, this._securityController.register);
-    // this.router.post('/login', SecurityMiddlewares.verifyLoginFields, this._securityController.login);
-    // this.router.post('/verify-jwt', SecurityMiddlewares.verifyJwtFields, this._securityController.verifyJwt);
+    this.router.get('/all', SharedMiddlewares.verifyJwtRequest, this._productsController.getProducts);
   }
 }

@@ -10,6 +10,6 @@ ENV NODE_OPTIONS=--max-http-header-size=30000
 
 COPY . .
 
-EXPOSE 3004
+EXPOSE 3002
 
 CMD ["npm", "run", "dev"]
