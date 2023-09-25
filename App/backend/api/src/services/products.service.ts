@@ -11,4 +11,8 @@ export default class ProductsService implements IProductsService {
     public async getProducts(): Promise<Products[]> {
         return await this._productsModel.getProducts();
     }
+
+    public async getProductById(id: number): Promise<Products | null> {
+        return await this._productsModel.getProductById(id);
+    }
 }

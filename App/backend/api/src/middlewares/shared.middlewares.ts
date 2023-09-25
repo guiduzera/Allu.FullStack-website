@@ -17,7 +17,9 @@ export default class SharedMiddlewares {
         return res.status(400).json({ message: "Token inválido!" });
       }
 
-      req.user = securityService as unknown as { id: number; name: string | null; email: string};
+      const { payload } = securityService as unknown as { payload: { id: number, name: string | null, email: string } };
+
+      req.user = payload;
 
       return next();
     } catch (error) {

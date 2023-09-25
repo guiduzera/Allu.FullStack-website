@@ -1,6 +1,7 @@
 import Cart from '@/components/Cart'
 import Header from '@/components/Header'
 import ProfileInfos from '@/components/ProfileInfos'
+import Logout from '@/components/logout'
 import { HomeContainer } from '@/styles/HomeStyles'
 import Head from 'next/head'
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Cart />
       <Header />
       <ProfileInfos />
+      <Logout />
     </HomeContainer>
   )
 }

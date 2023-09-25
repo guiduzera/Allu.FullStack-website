@@ -46,7 +46,7 @@ export const CartContainer = styled.div`
   @media (min-width: 768px) {
     width: 120px;
     height: 120px;
-    top: 180px;
+    top: 350px;
 
     > div {
       display: flex;

@@ -19,5 +19,6 @@ export default class ProductsRoutes {
 
   private userRoutes(): void {
     this.router.get('/all', SharedMiddlewares.verifyJwtRequest, this._productsController.getProducts);
+    this.router.get('/byId/:id', SharedMiddlewares.verifyJwtRequest, this._productsController.getProductById);
   }
 }

@@ -46,7 +46,7 @@ const Forms = () => {
       } catch (e) {
         console.log(e);
         // @ts-ignore
-        toast.error(e.message, {
+        toast.error(e.data.message, {
           style: {
             background: theme.error,
             color: '#fff'
@@ -74,7 +74,7 @@ const Forms = () => {
       } catch (e) {
         console.log(e);
         // @ts-ignore
-        toast.error(e.message, {
+        toast.error(e.data.message, {
           style: {
             background: theme.error,
             color: '#fff'

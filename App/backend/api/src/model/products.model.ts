@@ -11,4 +11,12 @@ export default class ProductsModel implements IProductsModel {
   public async getProducts(): Promise<Products[]> {
     return await this._prismaClient.products.findMany();
   }
+
+  public async getProductById(id: number): Promise<Products | null> {
+    return await this._prismaClient.products.findUnique({
+      where: {
+        id: id
+      }
+    });
+  }
 }

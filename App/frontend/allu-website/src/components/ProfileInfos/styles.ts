@@ -42,6 +42,11 @@ export const Container = styled.div`
       font-weight: 600;
       color: ${({ theme }) => theme.primary};
     }
+
+    > .productLimit {
+      padding: 1rem;
+      overflow-y: scroll;
+    }
   }
 
   @media (min-width: 768px) {
@@ -110,7 +115,7 @@ export const Container = styled.div`
 
 export const CardContainer = styled.div<{ $status: string, $show: boolean }>`
   width: 100%;
-  height: 100%;
+  height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,19 +130,19 @@ export const CardContainer = styled.div<{ $status: string, $show: boolean }>`
     display: flex;
     justify-content: center;
     align-items: center;
+    object-fit: cover;
 
     > img {
-      width: 100%;
+      width: 7rem;
       max-width: 100%;
-      height: 100%;
-      max-height: 100%;
       border-radius: 0.5rem;
+      object-fit: cover;
     }
   }
 
   > .productInfosContainer {
     display: flex;
-    width: 50%;
+    width: 60%;
     height: 100%;
     flex-direction: column;
     align-items: center;
@@ -176,9 +181,9 @@ export const CardContainer = styled.div<{ $status: string, $show: boolean }>`
       padding: 0.3rem;
       border-radius: 0.5rem;
       position: absolute;
-      bottom: 10px;
-      left: 10px;
-      width: 3.5rem;
+      bottom: 8px;
+      left: 8px;
+      width: 3rem;
     }
   }
 
@@ -192,6 +197,7 @@ export const CardContainer = styled.div<{ $status: string, $show: boolean }>`
   }
 
   @media (min-width: 768px) {
+    height: 12rem;
     > .productInfosContainer {
       justify-content: center;
       gap: 1rem;
@@ -219,21 +225,21 @@ export const CardContainer = styled.div<{ $status: string, $show: boolean }>`
 
       > .nowMore {
         bottom: 15px;
-        right: 450px;
+        right: 300px;
       }
     }
   }
 
   @media (min-width: 1024px) {
     width: 100%;
-    height: 30%;
+    height: 10rem;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
 
     > .imageContainer {
-      width: 40%;
+      width: 8rem;
       height: 100%;
       display: flex;
       justify-content: center;
