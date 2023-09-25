@@ -12,7 +12,7 @@ export default class Requests {
         }
       );
 
-      return response;
+      return response.data;
     } catch (error) {
         console.log(error);
       return false;
