@@ -29,7 +29,7 @@ model Orders {
   document    String
   total       Float
   product_id  Int
-  image       String
+  image       String   @db.LongText
   quantity    Int
 
   @@map("orders")
