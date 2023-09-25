@@ -27,9 +27,10 @@ class App {
     };
 
     this.app.use(express.json());
+    this.app.use(cors());
     this.app.use(accessControl);
     this.app.use(this.routerClass.router);
-    this.app.use(cors());
+    // this.app.use(UniversalErrorMiddleware.handleErrors);
   }
 
   public start(PORT: number | string): void {
