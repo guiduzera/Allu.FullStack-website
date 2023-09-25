@@ -6,6 +6,7 @@ export const CartContainer = styled.div`
   z-index: 999;
   bottom: 10px;
   right: 20px;
+  cursor: pointer;
 
   border-radius: 50%;
   width: 80px;

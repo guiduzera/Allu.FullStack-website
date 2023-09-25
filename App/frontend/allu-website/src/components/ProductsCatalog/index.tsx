@@ -136,9 +136,9 @@ const ProductsCatalog = () => {
             <p>Ordem:</p>
           </div>
           <div className="ordringFilters">
-            <input type="checkbox" id="alfa" name="alfa" value="alfabética" onClick={handleAlfa} checked={alfaChecked} />
+            <input type="checkbox" id="alfa" name="alfa" value="alfabética" onChange={handleAlfa} checked={alfaChecked} />
             <label htmlFor="alfa">Alfabética</label>
-            <input type="checkbox" id="preco" name="preco" value="preco" onClick={handlePrice} checked={priceChecked} />
+            <input type="checkbox" id="preco" name="preco" value="preco" onChange={handlePrice} checked={priceChecked} />
             <label htmlFor="preco">Preço</label>
           </div>
         </div>

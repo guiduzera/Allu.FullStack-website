@@ -1,0 +1,1 @@
+// pasta para impementar modelos de respostas do banco para evitar o uso excessivo de any e melhorar a tipagem

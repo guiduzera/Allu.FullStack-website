@@ -6,6 +6,7 @@ export const Logout = () => {
 
   const handleClick = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("cart");
     
     router.push("/login");
   };

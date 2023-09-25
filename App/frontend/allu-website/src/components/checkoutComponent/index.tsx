@@ -92,7 +92,7 @@ export const CheckoutComponent = () => {
     const cart = JSON.parse(localCart);
     const total = cart.map((item: any) => item.price * item.quantity);
     const totalValue = total.reduce((acc: any, curr: any) => acc + curr);
-    setTotal(totalValue);
+    setTotal(totalValue.toFixed(2));
   };
 
   return (

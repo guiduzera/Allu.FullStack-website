@@ -43,10 +43,16 @@ const Forms = () => {
         // salvar o token no localstorage
         localStorage.setItem("token", token);
         router.push("/");
+        toast.success('Login realizado com sucesso', {
+          style: {
+            background: theme.primary,
+            color: '#fff'
+          }
+        });
       } catch (e) {
         console.log(e);
         // @ts-ignore
-        toast.error(e.message, {
+        toast.error(e.response.data.message, {
           style: {
             background: theme.error,
             color: '#fff'
@@ -71,10 +77,16 @@ const Forms = () => {
         // salvar o token no localstorage
         localStorage.setItem("token", token);
         router.push("/");
+        toast.success('Cadastro realizado com sucesso', {
+          style: {
+            background: theme.primary,
+            color: '#fff'
+          }
+        });
       } catch (e) {
         console.log(e);
         // @ts-ignore
-        toast.error(e.message, {
+        toast.error(e.response.data.message, {
           style: {
             background: theme.error,
             color: '#fff'

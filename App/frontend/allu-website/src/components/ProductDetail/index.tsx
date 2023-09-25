@@ -31,7 +31,6 @@ const ProductDetail = () => {
           }
         );
 
-        console.log(response.data.product);
         setProduct(response.data.product);
       } catch (error) {
         console.log(error);
