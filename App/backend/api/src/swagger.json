@@ -264,9 +264,9 @@
   "components": {
     "securitySchemes": {
       "bearerAuth": {
-        "type": "http",
-        "scheme": "bearer",
-        "bearerFormat": "JWT"
+        "type": "apiKey",
+        "name": "authorization",
+        "in": "header"
       }
     },
     "schemas": {
