@@ -1,12 +1,11 @@
 import express, { Express } from 'express';
 import cors from 'cors';
-//import router from './routes';
-// import Router from './routes/Router';
-// import UniversalErrorMiddleware from './middlewares/UniversalErrorMiddleware';
+import Router from './routes/Router';
+import UniversalErrorMiddleware from './middlewares/universalError.middleware';
 
 class App {
   public app: Express;
-//   public routerClass = new Router();
+  public routerClass = new Router();
 
   constructor() {
     this.app = express();
@@ -28,9 +27,10 @@ class App {
     };
 
     this.app.use(express.json());
-    this.app.use(accessControl);
-    //this.app.use(router);
     this.app.use(cors());
+    this.app.use(accessControl);
+    this.app.use(this.routerClass.router);
+    this.app.use(UniversalErrorMiddleware.handleErrors);
   }
 
   public start(PORT: number | string): void {
