@@ -43,8 +43,6 @@ const ProfileInfos = () => {
 
         setProducts(responseProducts);
         setSubscribes(response.data.orders);
-        console.log(responseProducts);
-        console.log(response.data.orders);
       } catch (error) {
         console.log(error);
       }
