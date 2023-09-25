@@ -1,15 +1,8 @@
 import { NextFunction, Request, Response } from 'express';
 import registerZodSchema from '../helpers/zodSchema';
 import CustomError from '../helpers/CustomError';
-import { IJwt } from '../interfaces/security.interfaces';
 
 export default class SecurityMiddlewares {
-  public jwt: IJwt;
-
-  constructor(jwt: IJwt) {
-    this.jwt = jwt;
-  }
-
   public static async verifyFields(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
     try {
       const { name, email, password } = req.body;
