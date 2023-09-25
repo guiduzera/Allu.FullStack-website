@@ -5,6 +5,11 @@ export interface IOrdersModel {
     createOrder(order: ICreateOrder): Promise<boolean>;
 }
 
+export interface IOrdersService {
+    getOrdersByUser(userId: number): Promise<Orders[]>;
+    createOrder(order: ICreateOrder): Promise<boolean>;
+};
+
 //-----------------------//
 //interface de parametros//
 
