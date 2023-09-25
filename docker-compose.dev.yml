@@ -47,8 +47,8 @@ services:
       # Dica: Relembre aqui da comunicação interna entre containers
       - DB_USER=root
       - DB_PASS=password
-      - DB_HOST=db
-      - DB_PORT=3306
+      - DB_HOST=database
+      - DB_PORT=3002
     healthcheck:
       test: ["CMD", "lsof", "-t", "-i:3001"] # Caso utilize outra porta interna para o back, altere ela aqui também
       timeout: 10s
@@ -72,14 +72,14 @@ services:
         dbsecurity:
           condition: service_healthy
       environment:
-        - APP_PORT=3002
+        - APP_PORT=3004
         - JWT_SECRET=jwt_secret
         # Os dados abaixo se referem ao container `db`
         # Dica: Relembre aqui da comunicação interna entre containers
         - DB_USER=root
         - DB_PASS=password
-        - DB_HOST=db
-        - DB_PORT=3306
+        - DB_HOST=databasesecurity
+        - DB_PORT=3003
       healthcheck:
         test: ["CMD", "lsof", "-t", "-i:3001"] # Caso utilize outra porta interna para o back, altere ela aqui também
         timeout: 10s

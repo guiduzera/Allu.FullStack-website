@@ -1,11 +1,7 @@
 import { App } from './app';
-//import 'dotenv/config';
-import * as path from 'path';
-import * as dotenv from 'dotenv';
+import 'dotenv/config';
 
-dotenv.config({ path: path.resolve(__dirname, '..', '..', `.env.${ process.env.NODE_ENV }`) });
-
-const PORT = process.env.APP_PORT || 3002;
+const PORT = process.env.APP_PORT || 3004;
 
 const app = new App();
 
