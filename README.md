@@ -6,33 +6,40 @@ Uma aplicação fullStack desenvolvida com node.js, Next.js, React, Express e Ty
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
-
 ### 📋 Pré-requisitos
 
 De que coisas você precisa para instalar o software e como instalá-lo?
 
+```bash
+# ter o repositório clonado em sua máquina
+  git clone git@github.com:guiduzera/Allu.FullStack-website.git
 ```
-Dar exemplos
-```
+
+### * Atenção: Preferível abrir o repositório pelo git BASH, máquina com WSL ou nativa Linux
 
 ### 🔧 Instalação
 
-Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
+### Após o clone do prójeto na raíz digite o seguinte comando
 
-Diga como essa etapa será:
-
-```
-Dar exemplos
+```bash
+    npm run compose:up
 ```
 
-E repita:
+### Esse comando levantará o docker-compose e todos os containers necessários para rodar a aplicação em sua respectivas portas
 
-```
-Até finalizar
-```
+### Então acesse:
 
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
+* [frontend - localhost:3000](http://localhost:3000) - front da aplicação
+* [serviço api - localhost:3001](http://localhost:3001) - serviço que compreende produtos e pedidos
+* [serviço security - localhost:3002](http://localhost:3002) - serviço que compreende o fluxo de segurança e autenticação
+* [database - localhost:3003](http://localhost:3003) - database que agrupa os produtos e pedidos
+* [databasesecurity - localhost:3004](http://localhost:3004) - database que agrupa os usuários
+
+Caso queria derrubar os conteiners basta digitar o seguinte comando na raíz do projeto:
+
+```bash
+    npm run compose:down
+```
 
 ## ⚙️ Executando os testes
 
@@ -56,16 +63,15 @@ Dar exemplos
 
 ## 🛠️ Construído com
 
-* [Next.js e React](http://www.dropwizard.io/1.0.2/docs/) - O framework web front-end usado
-* [styled-components](https://maven.apache.org/) - Framework de CSS
-* [TypeScript](https://rometools.github.io/rome/) - Linguagem de programação
-* [Express]() - Framework back-end utilizado
-* [PostgreSQL]() - Banco de dados relacional usado
-* [Prisma]() - ORM utilizado
-* [Docker]() - Containerizador
-* [Jest]() - Testes unitários
-* [Eslint]() - Garantir padrões de código
-* [Swagger]() - Documentação da API
+* [Next.js e React](https://nextjs.org/) - O framework web front-end usado
+* [styled-components](https://styled-components.com/) - Framework de CSS
+* [TypeScript](https://www.typescriptlang.org/pt/) - Linguagem de programação
+* [Express](https://expressjs.com/pt-br/) - Framework back-end utilizado
+* [MySQL](https://www.mysql.com/) - Banco de dados relacional usado
+* [Prisma](https://www.prisma.io/) - ORM utilizado
+* [Docker](https://www.docker.com/) - Containerizador
+* [Jest](https://jestjs.io/pt-BR/) - Testes unitários
+* [Eslint](https://eslint.org/) - Garantir padrões de código
 
 ## 📌 Versão
 
@@ -77,8 +83,8 @@ Dar exemplos
 
 ## 🎁 Expressões de gratidão
 
-* Convide alguém da equipe para uma cerveja 🍺;
-* Um agradecimento publicamente 🫂;
+* Convide o autor para tomar uma cerveja 🍺;
+* Um agradecimento publicamente à Thiago Silva;
 
 ---
 ⌨️ com ❤️ por [Guilherme Carvalho](https://github.com/guiduzera) 😊

@@ -1,5 +1,7 @@
 import express, { Express } from 'express';
 import cors from 'cors';
+import swaggerUi from 'swagger-ui-express';
+import swaggerDocument from './swagger.json';
 import Router from './routes/Router';
 import UniversalErrorMiddleware from './middlewares/universalError.middleware';
 
@@ -19,7 +21,8 @@ class App {
 
   private config(): void {
     this.app.use(express.json());
-    this.app.use(cors()); 
+    this.app.use(cors());
+    this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
     this.app.use(this.routerClass.router);
     this.app.use(UniversalErrorMiddleware.handleErrors);
   }
