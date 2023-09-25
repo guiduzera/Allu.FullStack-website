@@ -7,5 +7,5 @@ export const ProductsContainer = styled.div`
 
 export const ProductsCatalogContainer = styled.div`
   width: 100%;
-  height: 70%;
+  height: 90%;
 `;

@@ -1,7 +1,5 @@
 import Header from "@/components/Header";
 import ProductsCatalog from "@/components/ProductsCatalog";
-import ProductsFilter from "@/components/ProductsCatalog/ProductsFilter";
-import SearchBar from "@/components/SearchBar";
 import { useContext, useEffect } from "react";
 import { ProductsCatalogContainer, ProductsContainer } from "@/styles/productsStyles";
 import Head from "next/head";
@@ -28,8 +26,6 @@ export default function Products() {
       </Head>
       <Cart />
       <Header />
-      <SearchBar />
-      <ProductsFilter />
       <ProductsCatalogContainer>
         <ProductsCatalog />
       </ProductsCatalogContainer>

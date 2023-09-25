@@ -11,7 +11,7 @@ interface ProductCardProps {
   spanPhrase: string;
   profile: boolean;
   name: string;
-  quantity: number;
+  quantity?: number;
   total: number;
   image: string;
 }
