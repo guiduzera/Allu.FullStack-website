@@ -19,10 +19,10 @@ De que coisas você precisa para instalar o software e como instalá-lo?
 
 ### 🔧 Instalação
 
-### Após o clone do prójeto na raíz digite o seguinte comando
+### Após o clone do prójeto, na raíz do diretório digite o seguinte comando
 
 ```bash
-    npm run compose:up
+    npm run compose:up # caso ocorra algum erro nos serviços aconselho rodar npm run compose:down e repetir o processo!
 ```
 
 ### Esse comando levantará o docker-compose e todos os containers necessários para rodar a aplicação em sua respectivas portas
