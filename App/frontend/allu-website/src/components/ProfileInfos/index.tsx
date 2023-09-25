@@ -88,6 +88,7 @@ const ProfileInfos = () => {
                 profile={true}
                 showSpan={true}
                 spanPhrase={subscribe.status}
+                id={subscribe.product_id}
               />
             );
           })}

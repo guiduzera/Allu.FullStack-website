@@ -5,10 +5,9 @@ import { useRouter } from "next/router";
 import DragAndDrop from "./DragAndDrop";
 import CartContext from "@/context/cartContext";
 
-
 export const CheckoutComponent = () => {
   const router = useRouter();
-  const [research, setResearch] = useContext(CartContext)
+  const [research, setResearch] = useContext(CartContext);
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
   const [finish, setFinish] = useState(false);
@@ -46,7 +45,7 @@ export const CheckoutComponent = () => {
 
     localStorage.setItem("cart", JSON.stringify(newCart));
     setCart(newCart);
-    setResearch(!research)
+    setResearch(!research);
   };
 
   const handleRemove = (id: number) => {
@@ -69,7 +68,7 @@ export const CheckoutComponent = () => {
 
     localStorage.setItem("cart", JSON.stringify(newCart));
     setCart(newCart);
-    setResearch(!research)
+    setResearch(!research);
   };
 
   const handleDelete = (id: number) => {
@@ -82,7 +81,7 @@ export const CheckoutComponent = () => {
 
     localStorage.setItem("cart", JSON.stringify(newCart));
     setCart(newCart);
-    setResearch(!research)
+    setResearch(!research);
   };
 
   const calcTotal = () => {
@@ -99,36 +98,52 @@ export const CheckoutComponent = () => {
   return (
     <ChackoutContainer>
       <div className="cardContainerCheckout">
-        {cart.map((item: any) => {
-          return (
-            <div className="cardsLimit">
-              <div className="cardBoard">
-                <div className="imageContainer" key={item.id}>
-                  <img src={item.image} alt="product image" />
-                </div>
-                <div className="cardInfos">
-                  <h2>{item.name}</h2>
-                  <p className="productPrice">{`R$ ${item.price}`}</p>
-                  <div className="controlersContainer">
-                    <button type="button" className="addLessButton" onClick={() => handleAdd(item.id)}>
-                      +
-                    </button>
-                    <p>{item.quantity}</p>
-                    <button type="button" className="addLessButton" onClick={() => handleRemove(item.id)}>
-                      -
-                    </button>
-                    <button type="button" className="removeButton" onClick={() => handleDelete(item.id)}>
-                      <FaRegTrashAlt />
-                    </button>
+        <div className="cardsLimit">
+            {cart.map((item: any) => {
+              return (
+                <div className="cardBoard">
+                  <div className="imageContainer" key={item.id}>
+                    <img src={item.image} alt="product image" />
+                  </div>
+                  <div className="cardInfos">
+                    <h2>{item.name}</h2>
+                    <p className="productPrice">{`R$ ${item.price}`}</p>
+                    <div className="controlersContainer">
+                      <button
+                        type="button"
+                        className="addLessButton"
+                        onClick={() => handleAdd(item.id)}
+                      >
+                        +
+                      </button>
+                      <p>{item.quantity}</p>
+                      <button
+                        type="button"
+                        className="addLessButton"
+                        onClick={() => handleRemove(item.id)}
+                      >
+                        -
+                      </button>
+                      <button
+                        type="button"
+                        className="removeButton"
+                        onClick={() => handleDelete(item.id)}
+                      >
+                        <FaRegTrashAlt />
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          );
-        })}
+              );
+            })}
+        </div>
         <FinishContainer>
           <h2>Total: R$ {total}</h2>
-          <button type="button" className="finishButton" onClick={() => setFinish(!finish)}>
+          <button
+            type="button"
+            className="finishButton"
+            onClick={() => setFinish(!finish)}
+          >
             Finalizar Compra
           </button>
           {finish && <DragAndDrop />}

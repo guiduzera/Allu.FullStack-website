@@ -18,6 +18,7 @@ const Cart = () => {
 
     if (cart.length > 0) {
       const quantity = cart.map((item: any) => item.quantity)
+      console.log('aquii', cart[0])
       const totalQuantity = quantity.reduce((acc: any, curr: any) => acc + curr)
       setQuantity(totalQuantity)
     }

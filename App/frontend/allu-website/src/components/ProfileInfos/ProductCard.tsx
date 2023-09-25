@@ -6,6 +6,7 @@ import CartContext from "@/context/cartContext";
 import { BsArrowRightShort } from "react-icons/bs";
 
 interface ProductCardProps {
+  id: number;
   showSpan: boolean;
   spanPhrase: string;
   profile: boolean;
@@ -16,7 +17,7 @@ interface ProductCardProps {
 }
 
 /* eslint-disable @next/next/no-img-element */
-const ProductCard = ({ showSpan, spanPhrase, profile, name, total, quantity, image }: ProductCardProps) => {
+const ProductCard = ({ showSpan, spanPhrase, profile, name, total, quantity, image, id }: ProductCardProps) => {
   const router = useRouter();
   const [research, setResearch] = useContext(CartContext);
 
@@ -72,7 +73,7 @@ const ProductCard = ({ showSpan, spanPhrase, profile, name, total, quantity, ima
           bottom: "10px",
           left: "80px",
         }} className="cartLogo" id='cart' onClick={handlerCartClick} />)}
-        <p className="nowMore" onClick={() => router.push('/details/1')}>Saiba mais<BsArrowRightShort /></p>
+        <p className="nowMore" onClick={() => router.push(`/details/${id}`)}>Saiba mais<BsArrowRightShort /></p>
         {profile && (<p>quantidade: {quantity}</p>)}
         <p>R$ {total}</p>
       </div>
