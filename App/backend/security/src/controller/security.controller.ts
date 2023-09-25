@@ -8,6 +8,7 @@ export default class SecurityController {
     this.securityService = securityService;
     this.register = this.register.bind(this);
     this.login = this.login.bind(this);
+    this.verifyJwt = this.verifyJwt.bind(this);
   }
 
   public async register(req: Request, res: Response, next: NextFunction): Promise<Response | void> {

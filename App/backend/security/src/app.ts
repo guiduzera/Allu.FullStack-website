@@ -1,7 +1,7 @@
 import express, { Express } from 'express';
 import cors from 'cors';
 import Router from './routes/Router';
-// import UniversalErrorMiddleware from './middlewares/UniversalErrorMiddleware';
+import UniversalErrorMiddleware from './middlewares/universalError.middleware';
 
 class App {
   public app: Express;
@@ -30,7 +30,7 @@ class App {
     this.app.use(cors());
     this.app.use(accessControl);
     this.app.use(this.routerClass.router);
-    // this.app.use(UniversalErrorMiddleware.handleErrors);
+    this.app.use(UniversalErrorMiddleware.handleErrors);
   }
 
   public start(PORT: number | string): void {

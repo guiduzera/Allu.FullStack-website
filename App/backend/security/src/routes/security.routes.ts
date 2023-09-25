@@ -6,6 +6,7 @@ import SecurityModel from '../model/security.model';
 import prisma from '../../prisma/client';
 import Jwt from '../helpers/Jwt';
 import Bcrypt from '../helpers/Bcrypt';
+import SecurityMiddlewares from '../middlewares/security.middlewares';
 
 export default class SecurityRoutes {
   public router = express.Router();
@@ -25,8 +26,8 @@ export default class SecurityRoutes {
   }
 
   private userRoutes(): void {
-    this.router.post('/register', this._securityController.register);
-    this.router.post('/login', this._securityController.login);
-    this.router.post('/verify-jwt', this._securityController.verifyJwt);
+    this.router.post('/register', SecurityMiddlewares.verifyFields, this._securityController.register);
+    this.router.post('/login', SecurityMiddlewares.verifyLoginFields, this._securityController.login);
+    this.router.post('/verify-jwt', SecurityMiddlewares.verifyJwtFields, this._securityController.verifyJwt);
   }
 }
