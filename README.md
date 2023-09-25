@@ -72,6 +72,7 @@ Dar exemplos
 * [Docker](https://www.docker.com/) - Containerizador
 * [Jest](https://jestjs.io/pt-BR/) - Testes unitários
 * [Eslint](https://eslint.org/) - Garantir padrões de código
+* [Swagger](https://swagger.io/) - Documentação das API's
 
 ## 📌 Versão
 
@@ -89,7 +90,10 @@ Dar exemplos
 ---
 ⌨️ com ❤️ por [Guilherme Carvalho](https://github.com/guiduzera) 😊
 
-# colocar depois no backend
+---
+# Detalhes Backend
+
+* Logo a baixo segue um diagrama de classes que fiz para me inspirar a estruturar a aplicação
 
 ```mermaid
 classDiagram
@@ -121,3 +125,29 @@ classDiagram
   Produto "1" -- "many" PedidoDeAssinatura : Contém
   Usuario "1" -- "many" PedidoDeAssinatura : Realiza
 ```
+
+# Documentação
+
+ ## O backend é dividio em dois serviços, dessa forma cada um tem sua documentação separadas em portas diferentes utilizando swagger
+
+ * [documentação - serviço api ](http://localhost:3001/api-docs/)
+ * [documentação - serviço security](http://localhost:3002/api-docs/)
+* é necessário o Docker estar com o compose up!!
+
+## Acessando essas urls é possível visualizar todas as rotas, métodos de requisição necessários, padrões de resposta e até mesmo o usuário pode testar as rotas requisitando direto do UI apresentado
+
+### Lembrete | Dica: Todas rotas do serviço de api são protegidas e precisam de um token válido em seus cabeçalhos para serem acessadas
+
+#### Assim recomendo que antes de testar essa rotas pelo swagger realizem login ou registro no serviço de security, e guardem o token para autorizar no swagger
+
+---
+
+# Detalhes frontend
+
+## O Front é feito com o framework Next.js enão todo o core e paginação se encontra na pasta pages dentro de src
+
+## Todos os componentes se encontram na pasta components que seguem o seguinte padrão:
+  * Nome da pasta é o nome do componente
+  * dentro da pasta terá obrigatóriamente um index.tsx e um styles.ts
+  * o index abrigará a estrutura toda e o styles.ts guardará os componentes estilizados do styled-components
+  * váriaveis úteis a todos os componentes se encontram na pasta environments
