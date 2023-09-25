@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { ISecurityService } from '../src/interfaces/security.interfaces';
+import { ISecurityService } from '../interfaces/security.interfaces';
 
 export default class SecurityController {
   public securityService: ISecurityService;
