@@ -11,6 +11,6 @@ export default class Router {
   }
 
   private routes(): void {
-    this.router.use('/users', this._securityRoutes.router);
+    this.router.use('/security', this._securityRoutes.router);
   }
 }
