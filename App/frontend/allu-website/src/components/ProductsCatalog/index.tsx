@@ -114,7 +114,7 @@ const ProductsCatalog = () => {
     <CatalogContainer>
       <SearchBarContainer>
         <input type="text" placeholder="Pequise um produto" value={search} onChange={handleChange} onKeyDown={handleSearch} />
-        <button type="button" onClick={handlerClick}>
+        <button type="button" onClick={handlerClick} className="searchBarButton">
           <TbShoppingBagSearch
             style={{
               fontSize: "2rem",
@@ -122,7 +122,7 @@ const ProductsCatalog = () => {
             }}
           />
         </button>
-        {clear && <button type="button" onClick={handleClear}>
+        {clear && <button type="button" onClick={handleClear} className="searchBarButton clearButton">
           <FcCancel style={{
               fontSize: "2rem",
               cursor: "pointer",
