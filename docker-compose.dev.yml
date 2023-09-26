@@ -61,7 +61,7 @@ services:
       build: ./App/backend/security
       networks:
         - frontend
-        - dbsecurity
+        - security
       ports:
         - 3002:3002
       volumes:
@@ -111,7 +111,7 @@ services:
     image: mysql:5.7
     container_name: databasesecurity
     networks:
-      - dbsecurity
+      - security
     platform: linux/x86_64
     ports:
       - 3004:3306
@@ -132,6 +132,4 @@ services:
 networks:
   frontend:
   database:
-  api:
   security:
-  dbsecurity:
