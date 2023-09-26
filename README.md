@@ -1,33 +1,38 @@
 # Allu. Website
 
-Uma aplicação fullStack desenvolvida com node.js, Next.js, React, Express e TypeScript com o padrão de microsserviços para gerar um website focado em produtos por assinatura
+Uma aplicação fullStack desenvolvida com Node.js, Next.js, React, Express, TypeScript e MySQL com o padrão de microsserviços para gerar um website focado em produtos por assinatura
 
 ## 🚀 Começando
 
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+Essas instruções permitirão que você execute uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
 ### 📋 Pré-requisitos
 
-De que coisas você precisa para instalar o software e como instalá-lo?
+   Ambiente Windows:
+    - Git Bash
+    - DockerDesktop
 
-```bash
-# ter o repositório clonado em sua máquina
-  git clone git@github.com:guiduzera/Allu.FullStack-website.git
-```
+   Ambiente Linux
+    - Git (Nativo)
+    - Docker (Nativo)
 
 ### * Atenção: Preferível abrir o repositório pelo git BASH, máquina com WSL ou nativa Linux
 
 ### 🔧 Instalação
 
+Inicie clonando o projeto
+```bash
+# ter o repositório clonado em sua máquina
+  git clone git@github.com:guiduzera/Allu.FullStack-website.git
+```
+
 ### Após o clone do prójeto, na raíz do diretório digite o seguinte comando
 
 ```bash
-    npm run compose:up # caso ocorra algum erro nos serviços aconselho rodar npm run compose:down e repetir o processo!
+    npm run compose:up
 ```
 
-### Esse comando levantará o docker-compose e todos os containers necessários para rodar a aplicação em sua respectivas portas
-
-### Então acesse:
+### Esse comando vai instanciar todos os containers necessários para rodar a aplicação com todas as configurações necessárias, conforme abaixo:
 
 * [frontend - localhost:3000](http://localhost:3000) - front da aplicação
 * [serviço api - localhost:3001](http://localhost:3001) - serviço que compreende produtos e pedidos
@@ -35,33 +40,17 @@ De que coisas você precisa para instalar o software e como instalá-lo?
 * [database - localhost:3003](http://localhost:3003) - database que agrupa os produtos e pedidos
 * [databasesecurity - localhost:3004](http://localhost:3004) - database que agrupa os usuários
 
-Caso queria derrubar os conteiners basta digitar o seguinte comando na raíz do projeto:
+### Agora basta acessar o frontend da aplicação através do endereço abaixo:
+
+[frontend - localhost:3000](http://localhost:3000) - front da aplicação
+
+Para desmontar os conteiners basta digitar o seguinte comando na raíz do projeto:
 
 ```bash
     npm run compose:down
 ```
 
-## ⚙️ Executando os testes
-
-Explicar como executar os testes automatizados para este sistema.
-
-### 🔩 Analise os testes de ponta a ponta
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-### ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-## 🛠️ Construído com
+## 🛠️ Tecnologias utilizadas:
 
 * [Next.js e React](https://nextjs.org/) - O framework web front-end usado
 * [styled-components](https://styled-components.com/) - Framework de CSS
@@ -74,23 +63,6 @@ Dar exemplos
 * [Eslint](https://eslint.org/) - Garantir padrões de código
 * [Swagger](https://swagger.io/) - Documentação das API's
 
-## 📌 Versão
-
-1.0.0
-
-## ✒️ Autores
-
-* **Guilherme Carvalho** - *Trabalho Inicial* - [Github](https://github.com/guiduzera)
-
-## 🎁 Expressões de gratidão
-
-* Convide o autor para tomar uma cerveja 🍺;
-* Um agradecimento publicamente à Thiago Silva;
-
----
-⌨️ com ❤️ por [Guilherme Carvalho](https://github.com/guiduzera) 😊
-
----
 # Detalhes Backend
 
 * Logo a baixo segue um diagrama de classes que fiz para me inspirar a estruturar a aplicação
@@ -128,26 +100,46 @@ classDiagram
 
 # Documentação
 
- ## O backend é dividio em dois serviços, dessa forma cada um tem sua documentação separadas em portas diferentes utilizando swagger
+ ## O backend é dividio em dois serviços, dessa forma cada um tem sua documentação separada em portas diferentes utilizando swagger
 
  * [documentação - serviço api ](http://localhost:3001/api-docs/)
  * [documentação - serviço security](http://localhost:3002/api-docs/)
-* é necessário o Docker estar com o compose up!!
+* é necessário que todos os serviços estejam ativos.
 
-## Acessando essas urls é possível visualizar todas as rotas, métodos de requisição necessários, padrões de resposta e até mesmo o usuário pode testar as rotas requisitando direto do UI apresentado
+## Acessando essas urls, é possível visualizar todas as rotas, métodos de requisição, padrões de resposta e até mesmo o usuário pode testar as rotas requisitando direto do UI apresentado
 
-### Lembrete | Dica: Todas rotas do serviço de api são protegidas e precisam de um token válido em seus cabeçalhos para serem acessadas
+### Lembrete | Dica: Todas rotas do serviço de api são protegidas por middlewares e precisam de um token válido em seus cabeçalhos para serem acessadas
 
-#### Assim recomendo que antes de testar essa rotas pelo swagger realizem login ou registro no serviço de security, e guardem o token para autorizar no swagger
+#### Assim recomendo que antes de testar as rotas pelo swagger, é necessário realizar o login via aplicação ou postmam para que a aplicação gere o "token". Após guardar o token, basta acessar o swagger novamente e clicar no "cadeado" no canto superior direito, inserir o token gerado pela aplicação e clicar em "Autorizar".
+
+* OBSERVAÇÃO: O descritivo acima se aplica a rota "[documentação - serviço api ](http://localhost:3001/api-docs/)"
 
 ---
 
 # Detalhes frontend
 
-## O Front é feito com o framework Next.js enão todo o core e paginação se encontra na pasta pages dentro de src
+## O Front é feito com o framework Next.js então todo o core e paginação se encontra na pasta pages dentro de src.
 
-## Todos os componentes se encontram na pasta components que seguem o seguinte padrão:
+## Todos os componentes se encontram na pasta "components", que seguem o seguinte padrão:
   * Nome da pasta é o nome do componente
-  * dentro da pasta terá obrigatóriamente um index.tsx e um styles.ts
-  * o index abrigará a estrutura toda e o styles.ts guardará os componentes estilizados do styled-components
-  * váriaveis úteis a todos os componentes se encontram na pasta environments
+  * Dentro da pasta terá um index.tsx e um styles.ts
+  * O index abrigará a estrutura toda, e o styles.ts guardará os componentes estilizados do styled-components
+  * Váriaveis úteis a todos os componentes se encontram na pasta environments
+
+## 📌 Versão
+
+1.0.0
+
+## ✒️ Autores
+
+* **Guilherme Carvalho** - *Trabalho Inicial* - [Github](https://github.com/guiduzera)
+
+## 🎁 Expressões de gratidão
+
+* Convide o autor para tomar uma cerveja 🍺;
+* Um agradecimento publicamente à Thiago Silva;
+
+---
+⌨️ com ❤️ por [Guilherme Carvalho](https://github.com/guiduzera) 😊
+
+---
