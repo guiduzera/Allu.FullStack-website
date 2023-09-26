@@ -34,11 +34,11 @@ export const ProductDetailContainer = styled.div`
     }
 
     > p {
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: 400;
       color: black;
       text-align: justify;
-      width: 90%;
+      width: 100%;
     }
 
     #price {
@@ -69,6 +69,14 @@ export const ProductDetailContainer = styled.div`
       > .turnBackButton {
         margin-right: 38rem;
       }
+
+      > p {
+        font-size: 1rem;
+        font-weight: 400;
+        color: black;
+        text-align: justify;
+        width: 90%;
+      }
     }
 
     > .imageContainer {
@@ -91,7 +99,10 @@ export const ProductDetailContainer = styled.div`
 
       > p {
         font-size: 1.2rem;
-        width: 80%;
+        font-weight: 400;
+        color: black;
+        text-align: justify;
+        width: 90%;
       }
     }
   }

@@ -279,7 +279,16 @@ export const CardContainer = styled.div<{ $status: string, $show: boolean }>`
 
       > .nowMore {
         bottom: 15px;
-        right: 575px;
+        right: 300px !important;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    > .productInfosContainer {
+      > .nowMore {
+        bottom: 12px;
+        right: 420px;
       }
     }
   }

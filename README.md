@@ -126,6 +126,8 @@ classDiagram
   * O index abrigará a estrutura toda, e o styles.ts guardará os componentes estilizados do styled-components
   * Váriaveis úteis a todos os componentes se encontram na pasta environments
 
+## Largura das telas utilizadas para responsividade: iPhone XR, iPad Mini, iPad Air, notebook
+
 ## 📌 Versão
 
 1.0.0

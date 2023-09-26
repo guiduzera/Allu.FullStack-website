@@ -59,7 +59,7 @@ const ProductCard = ({ showSpan, spanPhrase, profile, name, total, quantity, ima
   }
 
   const handleSpanClick = () => {
-    if (spanPhrase === "Assinar") {
+    if (spanPhrase === "ass.") {
       handlerCartClick();
       router.push("/checkout");
     }

@@ -149,7 +149,7 @@ const ProductsCatalog = () => {
             <ProductCard
               key={product.id}
               showSpan
-              spanPhrase="add"
+              spanPhrase="ass."
               profile={false}
               id={product.id}
               name={product.name}
