@@ -146,7 +146,19 @@ export const SearchBarContainer = styled.div`
     }
 
     > input {
+      margin-top: 1.2rem;
       width: 50%;
+      height: 80%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    > .searchBarButton {
+      margin-top: 1.2rem;
+    }
+
+    > input {
+      height: 70%;
     }
   }
 `;
