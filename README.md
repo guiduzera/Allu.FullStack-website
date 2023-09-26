@@ -26,6 +26,8 @@ Inicie clonando o projeto
   git clone git@github.com:guiduzera/Allu.FullStack-website.git
 ```
 
+### * Atenção: Sempre verifique se seu código local está alinhado com repositório remoto!!
+
 ### Após o clone do prójeto, na raíz do diretório digite o seguinte comando
 
 ```bash
