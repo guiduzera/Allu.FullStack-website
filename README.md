@@ -116,6 +116,31 @@ classDiagram
 
 * OBSERVAÇÃO: O descritivo acima se aplica a rota "[documentação - serviço api ](http://localhost:3001/api-docs/)"
 
+## ⚙️ Executando os testes
+Antes de executar os testes é necessário navegar até o diretório raiz dos serviços api ou security
+
+```bash
+    cd App cd backend cd api
+
+    # ou
+
+    cd App cd backend cd security
+```
+
+Após essa etapa, basta rodar o seguinte comando:
+
+```bash
+    npm test
+```
+
+Assim todos os testes daquele respectivo serviço vão rodar de uma única só vez!
+
+* Dica: Os testes podem ser filtrados especificando o caminho do arquivo ou pasta que precisa ser testada como no exemplo à seguir:
+
+```bash
+    npm test service/orders.test.ts
+```
+
 ---
 
 # Detalhes frontend
