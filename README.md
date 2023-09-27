@@ -46,6 +46,9 @@ Inicie clonando o projeto
 
 [frontend - localhost:3000](http://localhost:3000) - front da aplicação
 
+* Atenção: Essa aplicação foi revisada várias vezes. Após o acesso ao frontend se perceber algum erro inesperado relacionado ao acesso à API
+* Execute o comando presente na instrução logo a baixo, após reinicie os containeres com o comando ```npm run compose:up```. Obrigado!
+
 Para desmontar os conteiners basta digitar o seguinte comando na raíz do projeto:
 
 ```bash
