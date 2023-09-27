@@ -9,12 +9,12 @@ const prismaClientMock = {
   },
 } as unknown as PrismaClient;
 
-const securityModel = new ProductsModel(prismaClientMock);
+const productsModel = new ProductsModel(prismaClientMock);
 
 describe("Testando os métodos da classe ProductsModel", () => {
   describe("Testando o método getProducts", () => {
     test("Deve retornar todos os produtos", async () => {
-      const products = await securityModel.getProducts();
+      const products = await productsModel.getProducts();
 
       expect(products).toEqual(allProductsMock);
     });
@@ -22,7 +22,7 @@ describe("Testando os métodos da classe ProductsModel", () => {
 
   describe("Testando o método getProductById", () => {
     test("Deve retornar o produto caso ele exista", async () => {
-      const product = await securityModel.getProductById(1);
+      const product = await productsModel.getProductById(1);
 
       expect(product).toEqual({ product: allProductsMock.products[0] });
     });
