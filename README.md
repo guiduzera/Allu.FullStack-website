@@ -36,6 +36,12 @@ Inicie clonando o projeto
 
 ### Esse comando vai instanciar todos os containers necessários para rodar a aplicação com todas as configurações necessárias, conforme abaixo:
 
+:exclamation::exclamation::exclamation::exclamation::point_down::point_down::exclamation::exclamation::exclamation:
+* Atenção: Essa aplicação foi revisada várias vezes e está funcionando como o esperado. Se após o acesso ao frontend perceber-se algum erro inesperado relacionado ao acesso à API como por exemplo: A loja não carregar os produtos
+* Execute o comando presente na instrução logo a baixo ```npm run compose:down```, após reinicie os containeres com o comando ```npm run compose:up```. Obrigado! Isso sempre resolve :smiley:
+
+:exclamation::exclamation::exclamation::exclamation::point_up::point_up::exclamation::exclamation::exclamation:
+
 * [frontend - localhost:3000](http://localhost:3000) - front da aplicação
 * [serviço api - localhost:3001](http://localhost:3001) - serviço que compreende produtos e pedidos
 * [serviço security - localhost:3002](http://localhost:3002) - serviço que compreende o fluxo de segurança e autenticação
@@ -45,12 +51,6 @@ Inicie clonando o projeto
 ### Agora basta acessar o frontend da aplicação através do endereço abaixo:
 
 [frontend - localhost:3000](http://localhost:3000) - front da aplicação
-
-:exclamation::exclamation::exclamation::exclamation::point_down::point_down::exclamation::exclamation::exclamation:
-* Atenção: Essa aplicação foi revisada várias vezes. Após o acesso ao frontend se perceber algum erro inesperado relacionado ao acesso à API
-* Execute o comando presente na instrução logo a baixo, após reinicie os containeres com o comando ```npm run compose:up```. Obrigado! :smiley:
-
-:exclamation::exclamation::exclamation::exclamation::point_up::point_up::exclamation::exclamation::exclamation:
 
 Para desmontar os conteiners basta digitar o seguinte comando na raíz do projeto:
 
