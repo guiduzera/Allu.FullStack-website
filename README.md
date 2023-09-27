@@ -39,6 +39,7 @@ Inicie clonando o projeto
 :exclamation::exclamation::exclamation::exclamation::point_down::point_down::exclamation::exclamation::exclamation:
 * Atenção: Essa aplicação foi revisada várias vezes e está funcionando como o esperado. Se após o acesso ao frontend perceber-se algum erro inesperado relacionado ao acesso à API como por exemplo: A loja não carregar os produtos
 * Execute o comando presente na instrução logo a baixo ```npm run compose:down```, após reinicie os containeres com o comando ```npm run compose:up```. Obrigado! Isso sempre resolve :smiley:
+* As vezes os erros ocorrem em seguida, não se incomode em ter que reiniciar os containeres, até no máximo 2 vezes tudo se resolve! :smiley:
 
 :exclamation::exclamation::exclamation::exclamation::point_up::point_up::exclamation::exclamation::exclamation:
 
