@@ -167,7 +167,7 @@ Assim todos os testes daquele respectivo serviço vão rodar de uma única só v
 
 ## ✒️ Autores
 
-* **Guilherme Carvalho** - *Trabalho Inicial* - [Github](https://github.com/guiduzera)
+* **Guilherme Carvalho** - *Trabalho Completo* - [Github](https://github.com/guiduzera)
 
 ## 🎁 Expressões de gratidão
 
